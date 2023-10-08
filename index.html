@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>나만의 중고마켓</title>
+    <link rel="stylesheet"
+        href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/easygpt/default.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <style>
+        /* 꾸미기 */
+        body {
+            font-family: sans-serif;
+            /* 선택한 고딕체 폰트 이름으로 변경하고, 기본 폰트인 sans-serif로 대체할 수 있습니다. */
+        }
+        body {
+        background: linear-gradient(to bottom, #ffffff, #ffffff); /* 그라데이션 색상 및 방향을 조절하세요. */
+    }
+        .card:hover {
+            transform: scale(1.05);
+            /* 원하는 크기로 조절하세요. */
+            transition: transform 0.2s ease-in-out;
+            /* 부드러운 전환 효과를 추가합니다. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero bg-dark text-center py-5">
+        <h1 class="text-white">나만의 르탄마켓</h1>
+        <h2 class="text-white">집에 있는 물건을 팝니다!</h2>
+    </div>
+    <div class="my-5"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- 냄비 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="https://www.ikea.com/kr/ko/images/products/hemkomst-pot-with-lid-stainless-steel-glass__1083743_pe859078_s5.jpg?f=xxs"
+                        class="card-img-top" alt="냄비 이미지" style="width: 290px; height: 200px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">냄비</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">5만원</h6>
+                        <p class="card-text">
+                            한 번 밖에 안 쓴 냄비 팝니다. 부모님이 독립할 때 주신 거에요!
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 전기밥솥 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="https://m.빌리고.com/data/models/VGQWgbxT4H7E6kbyGmSDPAQpt6qKx4.jpg" class="card-img-top"
+                        alt="전기밥솥 이미지" style="width: 290px; height: 200px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">전기밥솥</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">8만원</h6>
+                        <p class="card-text">
+                            거의 사용하지 않은 전기밥솥 팝니다. 상태 양호합니다. (쿠첸)
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 주전자 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="주전자 이미지" style="width: 290px; height: 200px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">주전자</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">3만원</h6>
+                        <p class="card-text">
+                            사용감이 있지만 기능에는 문제 없는 주전자 팝니다.
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 노트북 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="https://gdimg.gmarket.co.kr/2482826078/still/400?ver=1668155071"
+                        class="card-img-top" alt="노트북 이미지" style="width: 290px; height: 300px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">노트북</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">50만원</h6>
+                        <p class="card-text">
+                            1년 쓴 노트북 팝니다. (애플코리아)
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 냉장고 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/sm/mc/20220316-021743-335-PD1kpKBE.png" class="card-img-top"
+                        alt="냉장고 이미지" style="width: 290px; height: 300px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">냉장고</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">80만원</h6>
+                        <p class="card-text">
+                            거의 사용하지 않은 냉장고 팝니다. 소음 적습니다. (삼성)
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 청소기 카드 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 300px">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVW881AjE5JUcismhoHRBj5Pd1nGfRGo1ag&usqp=CAU"
+                        class="card-img-top" alt="주전자 이미지" style="width: 290px; height: 300px;" />
+                    <div class="card-body">
+                        <h5 class="card-title">청소기</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">12만원</h6>
+                        <p class="card-text">
+                            사용감이 있지만 기능에는 문제 없는 청소기 팝니다. (코드제로나인)
+                        </p>
+                        <a href="https://spartacodingclub.kr/" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            상세 정보 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
